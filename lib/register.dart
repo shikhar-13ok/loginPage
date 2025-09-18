@@ -32,15 +32,17 @@ class RegisterPage extends StatelessWidget {
 
             ElevatedButton(
               onPressed: () {
-
                 String mail = emailController.text.trim();
                 String pass = passController.text.trim();
 
-                if(mail.isEmpty || pass.isEmpty){
-                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Fill the given fields")));
-                }
-                else{
-                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Register hogya!")));
+                if (mail.isEmpty || pass.isEmpty) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text("Fill the given fields")),
+                  );
+                } else {
+                  ScaffoldMessenger.of(
+                    context,
+                  ).showSnackBar(SnackBar(content: Text("Register hogya!")));
                 }
               },
               child: Text(
@@ -52,14 +54,14 @@ class RegisterPage extends StatelessWidget {
             SizedBox(height: 50),
 
             InkWell(
-              onTap: ()
-              {
-               // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>()));
+              onTap: () {
+                // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>()));
               },
-            
-            child: Text(
-              "Already Have a account? Click here",
-              style: TextStyle(color: Colors.red),
+
+              child: Text(
+                "Already Have a account? Click here",
+                style: TextStyle(color: Colors.red),
+              ),
             ),
           ],
         ),
